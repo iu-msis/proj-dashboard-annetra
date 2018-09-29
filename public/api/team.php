@@ -1,11 +1,9 @@
 <?php
 require '../../app/common.php';
-// Get task_id
-//$taskId = intval($_GET['taskId'] ?? 0);
-// Fetch all the work for that task id
-$teams = Team::findAll();
-
-// convert to json and print
-header('Content-type: application/json')
-
-echo json_encode($teams);
+// 1. Go to the database and get all work associated with the $taskId
+$teams = Team::fetchAll();
+// 2. Convert to JSON
+$json = json_encode($teams, JSON_PRETTY_PRINT);
+// 3. Print
+header('Content-Type: application/json');
+echo $json;
