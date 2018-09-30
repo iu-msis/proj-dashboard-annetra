@@ -77,7 +77,7 @@
             <tr v-for="task in tasks"
                 :key="task.id"
                 :id="'task-' + task.id"
-                :class="task.current_sprint ? 'current-sprint' : ''"
+                :class="task.current_sprint ? 'current-sprint' : '' "
                 @click="gotoTask(task.id)">
               <td>{{ task.title }}</td>
               <td>{{ task.type }}</td>
