@@ -34,7 +34,7 @@ class Work
       $this->start,
       $this->hours,
       $this->completion_estimate
-    ])
+    ]);
     $this->id = $db->lastInsertId();
   }
   public static function getWorkByTaskId(int $taskId) {
