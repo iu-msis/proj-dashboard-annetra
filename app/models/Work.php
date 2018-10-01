@@ -35,11 +35,6 @@ class Work
       $this->hours,
       $this->completion_estimate
     ])
-
-    if(!success){
-      die ('Bad SQL on insert');
-    }
-
     $this->id = $db->lastInsertId();
   }
   public static function getWorkByTaskId(int $taskId) {
