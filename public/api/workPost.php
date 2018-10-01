@@ -2,4 +2,4 @@
 
 require_once '../../app/common.php';
 
-var_dump()
+var_dump($_POST)
