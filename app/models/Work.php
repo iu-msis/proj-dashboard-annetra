@@ -24,8 +24,9 @@ class Work
     $this->stop = $date->format('Y-m-d H:i:s');
     $this->completion_estimate = intval($row['completion_estimate']);
   }
+
   public function create(){
-    $db=new POD(DB_SERVER, DB_USER, DB_PW);
+    $db=new PDO(DB_SERVER, DB_USER, DB_PW);
     $sql='INSERT INTO Work(task_id, team_id, start_date, hours, completion_estimate)
     VALUES (?,?,?,?,?)';
     $statement= $db->prepare($sql);
