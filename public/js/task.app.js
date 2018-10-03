@@ -33,7 +33,7 @@ var tasksApp = new Vue({
         console.error('Cannot submit, invalid values');
         return;
       }
-
+      this.workForm.task_id = this.taskId;
       this.workForm.start_date = this.workForm.start + ' ' + this.workForm.start_time;
       this.workForm.hours = this.workSpan;
       // Stop field not used by the API
