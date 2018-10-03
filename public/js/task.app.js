@@ -56,6 +56,7 @@ var tasksApp = new Vue({
       .catch( err => {
         console.error('WORK POST ERROR:');
         console.error(err);
+        console.log("string");
       })
 
       // Reset workForm
