@@ -100,6 +100,7 @@ var dashboardApp = new Vue({
     },
     buildEffortChart() {
       Highcharts.chart('effortChart', {
+          renderto: "effortChartProject",
            title: {
                text: 'Cumulative Effort'
            },
