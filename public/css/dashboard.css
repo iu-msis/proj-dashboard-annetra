@@ -64,8 +64,3 @@ th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
 }
-
-#outputChart {
-  height: 250px;
-  width: 250px;
-}
